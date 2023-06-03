@@ -1,27 +1,33 @@
-# News Demo starter files
+# Transcribe website using AWS services
 
-Starter files for the News application built with Go. Tutorial:
-https://freshman.tech/web-development-with-go/
+I wanted to learn about the services that AWS offers. While i did that i also challenged myself to write some Ruby and GO.
 
-Here's what the [completed application](https://freshman-news.herokuapp.com/)
-looks like:
 
-![demo](https://ik.imagekit.io/freshman/news-demo_MrYio9GKlzSi.png)
+#### How it works
 
-The code in this repo is meant to be a starting point for anyone following
-along with the tutorial.
+The user uploads a file to an S3 bucket throuh a website. That triggers a lambda function written in Ruby which then uploads the file to an AWS transcript service. 
+The transcript service then uploads the file to the same S3 bucket which the user checks and in the end receives the transcription. 
+<img width="1191" alt="Skærmbillede 2023-06-03 kl  20 54 35" src="https://github.com/gbalslevn/transcribe/assets/97167089/385f3d4c-154c-4ece-8655-3b6935344a03">
 
-## Prerequisites
+#### Live demo
+https://github.com/gbalslevn/transcribe/assets/97167089/f4bff059-2be3-4d7f-8a51-2d57a620d941
 
-You need to have [Go](https://golang.org/dl/) installed on your computer. The
-version used to test the code in the tutorial is **1.15.3**.
+Try it here: [Website](https://freshman.tech/web-development-with-go/)
 
-## Get started
 
-- Clone or download this repository to your filesystem.
+#### What did i accomplish?
+The project works and i learned about the AWS services (S3, AWS Transcribe, Lambda, API Gateway, CloudWatch) and also about Ruby and Go. 
+It is maybe not so rational to use so many different services and languages for such a small project, but it is ideal for the learning experience. 
 
-```bash
-$ git clone https://github.com/Freshman-tech/news-demo-starter-files
-```
+#### What would i do different?
+Right now the user uploads the file from the frontend which also exposes the AWS keys to the bucket. Quite bad practice but i just wanted to complete the project as it was a weekend project and i ran out of time. My plan in the beginning (look at pic below) was to upload the file to some Go code ('main.go' which i have written in this repository). I originally thought about using the AWS API Gateway to access the Go code. The go code would be hosted as a lamda function. 
+It would also be better practice to have an input and output bucket. Right now the user constantly asks the S3 bucket if there is a file. In the future a more elegant solution could be implemented here. 
 
-- `cd` into the project directory and follow along with the [tutorial](https://freshman.tech/web-development-with-go/).
+
+<img width="947" alt="Skærmbillede 2023-06-03 kl  21 13 22" src="https://github.com/gbalslevn/transcribe/assets/97167089/8303d502-4f15-4951-9196-0e7753244ac8">
+
+
+
+
+
+
