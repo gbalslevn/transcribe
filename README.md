@@ -10,9 +10,10 @@ The transcript service then uploads the file to the same S3 bucket which the use
 <img width="1191" alt="Skærmbillede 2023-06-03 kl  20 54 35" src="https://github.com/gbalslevn/transcribe/assets/97167089/385f3d4c-154c-4ece-8655-3b6935344a03">
 
 #### Live demo
-https://github.com/gbalslevn/transcribe/assets/97167089/f4bff059-2be3-4d7f-8a51-2d57a620d941
 
-Try it here: [Website](https://freshman.tech/web-development-with-go/)
+https://github.com/gbalslevn/transcribe/assets/97167089/39822cc9-6dcf-41fa-a551-1ba2500668d7
+
+Try it here: [Website](https://transcribe-audio-to-danish.onrender.com/)
 
 
 #### What did i accomplish?
