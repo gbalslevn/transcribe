@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;0,800;1,600&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcribe</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div>
+    <h1>Transkriber din lydfil</h1>
+    <div class="infoArea">
+      <p>Upload en lyd- eller videofil og få den transkriberet. Det virker kun for dansk tale.</p>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+      <div class="buttonArea">
+        <label for="audioFile" class="custom-file-upload">
+          Upload fil
+        </label>
+        <input id="audioFile" type="file" accept="audio/*, video/*"/>
+        <p id="fileName">Ingen fil valgt</p>
+        <button id="confirmButton">Transkriber</button>
+      </div>
+    </form>
+    <div class="loader"></div>
+    <div class="copy-field">
+      <button id="myTextField" title="Copy text">
+        <div id="textContent"><p></p></div>
+        <img src="copyIcon.png" alt="copy" id="copyIcon" width="25px">
+        <p id="copyConfirm"></p>
+      </button>
+    </div>
+  </div>
+</body>
+<script type="module" src="index.js"></script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.981.0.min.js"></script>
+
+</html>

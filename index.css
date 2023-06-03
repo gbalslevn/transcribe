@@ -1,0 +1,196 @@
+body {
+    background-color: rgb(105, 114, 137);
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+div {
+    width: 100%;
+}
+
+h1 {
+    margin-top: 64px;
+    margin-bottom: 4px;
+    font-size: 54px;
+}
+
+.infoArea {
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.infoArea p {
+    font-size: 14px;
+}
+
+.buttonArea {
+    margin: 8px;
+    padding: 16px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+
+
+#confirmButton {
+    color: white;
+    background-color: rgb(48, 159, 36);
+    margin: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 40px;
+    width: 50%;
+    max-width: 250px;
+    transition: background-color 0.2s ease;
+    border: none;
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#confirmButton:hover {
+    background-color: rgb(43, 181, 28);
+}
+
+#confirmButton:active {
+    background-color: rgb(48, 126, 39);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#fileName {
+    font-size: 12px;
+}
+
+.custom-file-upload {
+    margin: 4px;
+    border: 4px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    background-color: rgb(48, 159, 36);
+}
+
+.custom-file-upload:active {
+    background-color: rgb(62, 143, 53);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0);
+}
+
+.copy-field {
+    display: none;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#myTextField {
+    margin: 0 auto;    
+    position: relative;
+    text-align: left;
+    width: 90%;
+    min-height: 300px;
+    border-radius: 12px;
+    border: none;
+    text-decoration: none;
+    padding: 12px 12px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#myTextField:hover {
+    border: 1px rgb(126, 137, 165)solid;
+}
+
+#myTextField:active {
+    border: 2px rgb(126, 137, 165)solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0);
+}
+
+#textContent {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    border: none;
+    background-color: whitesmoke;
+    max-width: 85%;
+    outline: none;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+#copyIcon {
+    position: absolute;
+    right: 24px;
+    top: 12px;
+    transition: transform 0.1s ease;
+}
+
+#copyIcon:hover {
+    transform: scale(1.04);
+}
+
+#copyConfirm {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.loader {
+    display: none;
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid  rgb(48, 159, 36);
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 1.4s linear infinite;
+    /* Safari */
+    animation: spin 1.4s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
