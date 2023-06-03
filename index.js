@@ -12,14 +12,24 @@ const form = document.querySelector('form');
 form.addEventListener('submit', handleSubmit)
 
 function handleSubmit(event) {
-    document.querySelector('#confirmButton').disabled = true;
-    document.querySelector('.loader').style.display = 'flex';
+    handleButtonChange();
     const fileInput = document.getElementById('audioFile');
     const file = fileInput.files[0];
     uploadFile(file);
 
     //getTranscription(7492254678)
     event.preventDefault();
+}
+
+function handleButtonChange() {
+    document.querySelector('#confirmButton').disabled = true;
+    document.querySelector('.loader').style.display = 'flex';
+    document.querySelector('.copy-field').style.display = 'none';
+    document.querySelector('#confirmButton').style.backgroundColor = 'rgb(114, 120, 135)';
+    document.querySelector('#confirmButton').style.color = 'rgb(105, 114, 137)';
+    document.querySelector('#confirmButton').disabled = true;
+    document.querySelector('#confirmButton').style.boxShadow = 'none';
+    document.querySelector('#confirmButton').style.cursor = 'default';
 }
 
 function uploadFile(file) {
@@ -101,7 +111,7 @@ function copyText() {
     alert("Text copied to clipboard!");
 }
 
-if(document.querySelector('#textContent').innerText !== '') {
+if (document.querySelector('#textContent').innerText !== '') {
     document.querySelector('.copy-field').style.display = 'flex'
 }
 const fileInput = document.getElementById('audioFile');
