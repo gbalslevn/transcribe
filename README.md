@@ -21,7 +21,7 @@ The project works and i learned about the AWS services (S3, AWS Transcribe, Lamb
 It is maybe not so rational to use so many different services and languages for such a small project, but it is ideal for the learning experience. 
 
 #### What would i do different?
-Right now the user uploads the file from the frontend which also exposes the AWS keys to the bucket. Quite bad practice but i just wanted to complete the project as it was a weekend project and i ran out of time. My plan in the beginning (look at pic below) was to upload the file to some Go code ('main.go' which i have written in this repository). I originally thought about using the AWS API Gateway to access the Go code. The go code would be hosted as a lamda function. 
+Right now the user uploads the file from the frontend which also exposes the AWS keys to the bucket. Quite bad practice but i just wanted to complete the project as it was a weekend project and i ran out of time. My plan in the beginning (look at pic below) was to upload the file to some Go code ('main.go' which i have included in this repository). I originally thought about using the AWS API Gateway to access the Go code. The go code would be hosted as a lamda function. 
 It would also be better practice to have an input and output bucket. Right now the user constantly asks the S3 bucket if there is a file. In the future a more elegant solution could be implemented here. 
 
 
