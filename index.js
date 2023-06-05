@@ -1,7 +1,8 @@
-// Please dont abuse these keys
+import { ACCESS_KEY, SECRET_KEY } from './secrets.js';
+
 AWS.config.update({
-    accessKeyId: 'AKIA2PDQIEQEMGSVJY6P',
-    secretAccessKey: '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'
+    accessKeyId: ACCESS_KEY,
+    secretAccessKey: SECRET_KEY
 });
 
 const s3 = new AWS.S3({
