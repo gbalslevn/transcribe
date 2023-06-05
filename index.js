@@ -1,6 +1,8 @@
+import { ACCESS_KEY, SECRET_KEY } from './secrets.js';
+
 AWS.config.update({
-    accessKeyId: process.env.ACCESS_KEY,
-    secretAccessKey: process.env.SECRET_KEY
+    accessKeyId: ACCESS_KEY,
+    secretAccessKey: SECRET_KEY
 });
 
 const s3 = new AWS.S3({
